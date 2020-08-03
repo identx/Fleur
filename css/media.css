@@ -1,0 +1,530 @@
+@media (max-width: 1279px){
+    .header_menu li{
+        margin-right: 80px;       
+    }
+    .frame6{
+        left: 150px;
+    }
+}
+@media (max-width: 1239px){
+    .question_box{
+        width: 100%;
+        margin: 35px 0px 0px 0px;
+    }
+}
+@media(max-width: 1199px){
+    .header_menu li{
+        margin-right: 60px;
+    }
+    .interior_bouquets_row{
+        display: none;
+    }
+    .interior_bouquets_carousel_box{
+        display: block;     
+    }
+    .interior_large_photo{
+        width: auto;
+        max-width: 500px;
+    }
+}
+@media(max-width: 1099px){
+    .header_menu li{
+        margin-right: 40px;
+    }
+    .frame6{
+        display: none;
+    }
+}
+@media(max-width: 1039px){
+    .header{
+        flex-wrap: wrap;
+    }
+    .header_menu{
+        width: 100%;
+        order: 3;
+        display: flex;
+        justify-content: center;
+    }
+    .header_contacts{
+        order: 2;
+    }
+}
+@media(max-width: 999px){
+    .header_menu li{
+        margin-right: 20px;
+    }
+}
+@media(max-width: 991px){    
+    .catalog_description .pipeline{
+        display: none;
+    }
+    .catalog_description{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .catalog_description span{
+        margin-bottom: 7px;
+    }
+}
+@media(max-width: 949px){
+    .header_menu li{
+        margin-right: 5px;
+    }
+}
+@media(max-width: 919px){
+    .bouquet{
+        width: 130px;
+        height: 150px;
+    }
+    .bouquet_image{
+        width: 96px;
+        height: 86px;
+    }
+    .bouquet_name{
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+@media(max-width: 767px){
+    .frame_vector{
+        top: auto;       
+        bottom: 40px;        
+        width: 770px;
+        height: 640px;   
+    }
+}
+@media(max-width: 689px){
+    .actual_offers{
+        flex-direction: column;
+        top: 160px;
+    }
+    .actual_offers ul{
+        margin: 0 auto;
+        width: 60%;
+    }
+    .actual_offers ul:first-child li:last-child, .actual_offers ul:last-child li:first-child{
+        margin-top: 0px;
+    }
+    .frame2{
+        top: 120px;
+        width: 196px;
+        height: 960px;
+    }
+}
+@media(max-width: 579px){
+    .section_header{
+        min-height: 452px;
+        padding-bottom: 44px;
+    }
+    .header_logo{
+        width: 110px;
+        height: 65px;
+    }
+    .header_menu{
+        display: none;
+    }
+    .header_contacts{
+        display: none;
+    }
+    .header_frame, .frame3, .frame4, .frame6{
+        display: none;
+    }
+    .social_links{
+        top: 82px;
+        right: auto;
+        width: 100%;        
+        display: flex;
+        justify-content: center;
+    }
+    .social_links ul{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+    .social_links li{
+        margin-bottom: 0px;
+        margin-right: 25px;
+    }
+    .social_links li:last-child{
+        margin-right: 0px;
+    }
+    .main_banner_header, .main_banner_text{
+        text-align: center;
+    }
+    .main_banner_header{
+        font-size: 46px;
+        line-height: 46px;
+    }
+    .main_banner_text{
+        margin: 40px auto 0px;
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .main_banner_button{
+        margin: 30px auto 0px;
+    }
+    .actual_offers{
+        position: absolute;
+        width: 100%;
+        top: 420px;
+        margin: 0px;
+    }
+    .header_mobile_menu_line{
+        display: block;
+    }
+    .header_mobile_menu_button{
+        display: block;
+    }
+    .frame2{
+        top: 220px;
+    }
+    .welcome_section{
+        padding-top: 40px;
+    }
+    .welcome_content_text h2{       
+        text-align: center;      
+    }
+    .welcome_content_text p{
+        text-align: center;    
+    }
+    .section_header_name{
+        text-align: center;
+    }
+    .order_section{
+        background: url('../media/order_bg.jpg') no-repeat 30% top;
+        background-size: cover;
+    }
+    .instruction_p{
+        margin: 10px auto 0px;
+    }
+    .catalog_description{
+        align-items: center;
+        text-align: center;
+    }
+    .your_ideas p{
+        text-align: center;      
+    }
+    .your_ideas_social, .footer_social{
+        display: flex;
+        justify-content: center;
+    }
+    .your_ideas_social li:last-child, .footer_social li:last-child{
+        margin-right: 0px;
+    }
+    .your_ideas_phone, .footer_phone, .weddings_decoration_more{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .your_ideas_header{
+        display: none;
+    }
+    .your_ideas_mobile_header{
+        display: block;
+    }
+    .bouquet_prev{
+        margin-bottom: 16px;
+    }
+    .interior_bouquet_header{
+        margin-bottom: 11px;
+    }
+    .interior_bouquet_description, .weddings_decoration_description{
+        text-align: center;
+    }
+    .weddings_decoration_container{
+        justify-content: center;
+    }
+    .footer_logo{
+        display: flex;
+        justify-content: center;
+    }
+    .footer_logo_description{
+        text-align: center;
+    }
+    .footer_menu li{
+        text-align: center;
+    }
+    .inputs_row{
+        flex-direction: column;
+    }
+    .question_input, .question_button{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .your_ideas_row{
+        margin-top: 60px;
+    }
+    .frame_vector{
+        width: 650px;
+        height: 530px;
+        left: 0px;
+        bottom: 60px;
+    }
+}
+@media(max-width: 539px){
+    .bouquet_card, .dlc_card{
+        width: 130px;
+        height: 205px;
+        margin: 0px auto 12px;
+    }
+    .dlc_card{
+        height: 180px;
+    }
+    .bouquet_card_photo{        
+        height: 108px;
+    }
+    .bouquet_card_description{
+        padding: 11px 0px 0px 0px;
+    }
+    .bouquet_descr_name, .dlc_card_name{
+        text-align: center;
+        font-size: 14px;
+        line-height: 14px;        
+    }
+    .bouquet_descr_size{
+        text-align: center;
+        font-size: 10px;
+        line-height: 10px;
+    }
+    .bouquet_descr_cost_box{
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 7px;
+    }
+    .bouquet_descr_cost{
+        text-align: center;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .bouquet_descr_button{
+        margin-top: 5px;    
+    }
+}
+@media(max-width: 519px){
+    .order_form_box_bg{
+        width: 100%;
+    }
+}
+@media(max-width: 504px){
+    .actual_offers{        
+        top: 440px;
+    }
+    .question_box form{
+        width: 100%;
+        padding: 0 5px;
+    }
+}
+@media(max-width: 449px){
+    .actual_offers ul{
+        width: 80%;
+    }
+    .welcome_content_photo{
+        align-items: flex-end;
+    }
+    .welcome_content_photo img{
+        height: auto;
+        width: 100%;
+    }
+    .order_section{
+        background: url('../media/order_bg.jpg') no-repeat 36% top;
+        background-size: cover;
+    }
+}
+@media(max-width: 480px){
+    .popup_box_bg{
+        width: 100%;
+    }
+}
+@media(max-width: 420px){
+    .actual_offers{        
+        top: 460px;
+    }
+    .frame2{
+        top: 240px;
+    }
+    .welcome_section{
+        padding-top: 60px;
+    }
+    .welcome_content_photo{
+        margin-top: 10px;
+    }
+    .welcome_content_text h2{
+        font-size: 24px;
+        line-height: 55px;     
+        margin-bottom: 15px;
+    }
+    .welcome_content_text p{
+        font-size: 12px;
+        line-height: 18px;     
+        margin-bottom: 10px;
+    }
+    .welcome_content_text p:not(:nth-child(2)){
+        display: none;
+    }
+    .open_full_text{
+        display: block;
+    }
+    .section_header_name{
+        text-align: center;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .instruction_header{
+        margin-bottom: 10px;
+    }
+    .order_section{
+        padding-bottom: 0px;
+    }
+    .order_col{
+        padding: 0px;
+    }
+    .instruction_p{
+        width: 100%;
+        height: auto;
+        min-height: 82px;
+        padding: 18px 30px 22px 5px;
+        background-size: 100% 100%;
+    }
+    .instruction_p_text{
+        font-size: 12px;
+        line-height: 18px;
+        width: 100%;
+        max-width: auto;
+    }
+    .order_form_text{
+        font-size: 12px;
+        line-height: 19px;
+    }
+    .cat_point{
+        font-size: 13px;
+        line-height: 24px;
+    }
+    .catalog_description{
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .your_ideas p{        
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .bouquet_prev{
+        height: 280px;
+    }
+    .interior_bouquet_description{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .weddings_decoration_description{
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .weddings_decoration_more{
+        font-size: 13px;
+        line-height: 24px;
+    }
+    .question_box_header{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .question_box_text{
+        font-size: 12px;
+        line-height: 19px;
+    }
+    .frame_vector{
+        width: 550px;
+        height: 440px;
+        right: 0px;
+        bottom: 60px;
+    }
+}
+@media(max-width: 339px){
+    .actual_offers ul{
+        width: 100%;
+    }
+    .actual_offers{        
+        top: 500px;
+    }
+    .order_section{
+        background: url('../media/order_bg.jpg') no-repeat 40% top;
+        background-size: cover;
+    }
+    .bouquet_prev{
+        height: 220px;
+    }
+    .frame_vector{
+        right: 10px;
+    }
+    .interior_bouquet_photo{
+        height: 240px;
+    }
+}
+@media(max-width: 320px){
+    .order_form{
+        padding: 0 5px;
+        width: 100%;
+    }
+    .popup_content{
+        width: 100%;        
+    }
+    .popup_order_notice_content, .popup_content form{
+        width: 100%;
+        padding: 0 5px;
+    }    
+}
+@media(max-width: 319px){
+    .bouquet_card, .dlc_card{
+        width: 110px;
+        height: 180px;
+        margin: 0px auto 10px;
+    }
+    .dlc_card{
+        height: 160px;
+    }
+    .bouquet_card_photo{        
+        height: 90px;
+    }
+    .bouquet_card_description{
+        padding: 11px 0px 0px 0px;
+    }
+    .bouquet_descr_name, .dlc_card_name{
+        text-align: center;
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .bouquet_descr_size{
+        text-align: center;
+        font-size: 9px;
+        line-height: 9px;
+    }
+    .bouquet_descr_cost_box{
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 5px;
+    }
+    .bouquet_descr_cost{
+        text-align: center;
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .bouquet_descr_button{
+        margin-top: 5px;    
+    }
+}
+@media(max-width: 295px){
+    .bouquet_card, .dlc_card{
+        width: 100px;        
+    }
+    .dlc_card{
+        height: 140px;
+    }
+    .order_section{
+        background: url('../media/order_bg.jpg') no-repeat 42% top;
+        background-size: cover;
+    }
+    .actual_offers{        
+        top: 520px;
+    }
+    .main_banner_button{
+        width: 100%;
+    }
+}
