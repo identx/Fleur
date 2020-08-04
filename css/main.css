@@ -493,7 +493,7 @@ section{
 }
 .order_form_box_bg{
     width: 480px;
-    height: 523px;
+    height: 538px;
     background: #FEFEFE;
     border-radius: 6px;
     padding: 7px;    
@@ -557,10 +557,9 @@ section{
     box-shadow: 0px 3px 0px #4EBA6E;
     border-radius: 6px;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
-/* .select2-container{
-    width: 100%;
-} */
+
 .select2-results__option {
     padding: 6px 12px;
     cursor: pointer;
@@ -1059,7 +1058,7 @@ section{
     color: #57CF7A;
     background: rgba(51, 47, 47);
     margin-top: 19px;
-    margin-bottom: 28px;
+    margin-bottom: 10px;
 }
 
 .identx_box{
@@ -1278,4 +1277,164 @@ section{
 .img-bouquet_icon{
     width: 40px; 
     height: 40px;
+}
+
+.wedding-prices table {
+    width: 100%;
+    max-width: 838px;
+    margin: auto;
+}
+
+.wedding-prices table th, .wedding-prices table .td-price {
+    text-align: center;
+}
+
+.wedding-prices {
+    padding: 50px 0;
+    margin-top: 50px;
+}
+.work-item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    margin: 10px 0;
+    overflow: hidden;
+    align-content: center;
+}
+.work-item a > img {
+
+}
+
+.wedding-prices h2, .my-works h2 {
+    font-family: 'Caveat', cursive;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 55px;
+    color: #4F4F4F;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.question_box .error {
+    font-size: 13px;
+    color: #fff;
+}
+
+.question_box .alert-danger {
+    position: absolute;
+    bottom: -30px;
+    display: none;
+
+}
+
+.order_form_box .alert-danger {
+    position: absolute;
+    bottom: -20px;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.alert-danger {
+ font-size: 13px;
+ padding: 4px;
+
+}
+
+.popup_box_bg .alert-danger {
+    position: absolute;
+    bottom: 126px;
+    transform: translateX(-50%);
+    left: 50%;
+    display: none;
+}
+
+.wedding-header {
+    background-color: #f2e9ea;
+
+}
+
+.wedding-prices h1, .privacy h1, .page-404 h1 {
+    font-family: 'Caveat', cursive;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 55px;
+    color: #5A3333;
+    text-align: center;
+    margin: 0px 0px 50px 0px;
+}
+
+.wedding-prices .frame2 {
+    top: 122px;
+}
+
+.my-works {
+    margin-bottom: 50px;
+}
+
+.privacy-info {
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    /*padding-bottom: 40px;*/
+    max-width: 500px;
+    /*margin: 10px auto !important;*/
+}
+
+.question_box .privacy-info a, .order_form_box .privacy-info a, .popup_box_bg .privacy-info a { 
+    color: #57CF7A;
+}
+
+.order_form_box .privacy-info {
+    margin-bottom: 10px;
+}
+.question_box .privacy-info {
+    color: #fff;
+}
+
+.popup_box_bg .privacy-info {
+    margin-top: 10px;
+}
+
+.privacy, .page-404 {
+    padding: 50px 0;
+}
+
+.page-404 {
+    text-align: center;
+    min-height: 500px;
+}
+
+
+
+
+ .btn-aceptar {
+    color: #fff !important;
+    font-size: 13px !important;
+    border-radius: 5px !important;
+    background: #11da92 !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    transition: all .3s !important;
+    text-transform: none !important;
+    margin-left: 10px;
+}
+
+.weddings_decoration a {
+    color: #4F4F4F;
+}
+
+#cookie-msg {
+    padding: 10px 50px !important;
+    z-index: 999;
+}
+
+.cookie-privacy {
+    color: #11da92 !important;
 }

@@ -334,6 +334,10 @@
     .popup_box_bg{
         width: 100%;
     }
+
+    #cookie-msg .msg {
+        font-size: 12px !important;
+    }
 }
 @media(max-width: 420px){
     .actual_offers{        

@@ -1,5 +1,109 @@
 $( function() {
 
+
+    $('input[type="tel"]').mask('+7 (999) 999-99-99');
+
+
+
+    $.cookieMessage({
+      'mainMessage': 'Оставаясь на нашем сайте, вы принимаете использование сайтом файлов cookies🍪  в соответствии с нашей <a href="/privacy" class="cookie-privacy">Политикой конфиденциальности.</a>',
+      'acceptButton':'Хорошо',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      expirationDays: 20,
+      cookieName: 'cookieMessage',
+
+  });
+
+
+
+    $('input[name=form_button]').click(function(){
+        var type = "order";
+        var order_name = $('.popup_header .order_name').text();
+        var order_size = $('.popup_content select[name=bouquet_size]').select2('data')[0].text;
+        var client_name = $('.popup_content input[name=name]').val();
+        var client_phone = $('.popup_content input[name=phone]').val();
+        var delivery = $('.check_block input').prop("checked");
+        var address = $('.popup_content input[name=address]').val();
+
+        let error_form = $(this).parents().find('.alert-danger');
+        
+
+        var data = {'type':type, 'client_name':client_name, 'client_phone':client_phone, 'order_name':order_name, 'order_size':order_size, 'delivery':delivery, 'address':address};
+
+
+
+        $.post('../handlers/order.php', data, function(r){
+            if(r.status==true) {
+                error_form.hide();
+                $('.popup_box_bg form').trigger('reset');
+                closePopUp();
+                openPopUpOrderNotice();
+            } else {
+
+                error_form.show();
+                error_form.text(r.error);
+            }
+        },"json");
+
+    });
+
+
+    $('.question_box input[name=question_button]').click(function(){
+
+       let data = {};
+
+       data.name = $('.question_box input[name=name]').val();
+       data.phone = $('.question_box input[name=phone]').val();
+       data.question = $('.question_box textarea[name=question_text]').val();
+       let error_form = $(this).parents().find('.alert-danger');
+       $.post('../handlers/questions.php', data, function(r){
+        if(r.status==true) {
+            error_form.hide();
+            $('.question_box form').trigger('reset');
+
+        } else {
+
+            error_form.show();
+            error_form.text(r.error);
+        }
+    },"json");
+   });
+
+
+    $('#order_input_button').click(function(){
+     let data = {};
+     data.type = $('.bouquet_type option:selected').text();
+     data.size = $('.bouquet_size option:selected').text();
+     data.name = $('#bouquet-form-name').val()
+     data.phone = $('#bouquet-form-phone').val();
+     let error_form = $(this).parents().find('.alert-danger');
+     $.post('../handlers/main_form.php', data, function(r){
+        if(r.status==true) {
+            error_form.hide();
+            
+
+        } else {
+
+            error_form.show();
+            error_form.text(r.error);
+        }
+    },"json");
+ });
+
+
+    $('.to-call-btn').on('click', function(e){
+        e.preventDefault();
+        var form_data  = {};
+        form_data.name = $(this).parents().find('#to-call-form-name').val();
+        form_data.phone = $(this).parents().find('#to-call-form-phone').val();
+        form_data.organization = $(this).parents().find('#to-call-form-organization').val();
+        var error_form = $(this).parents().find('.error');
+        $('.loader').toggleClass('loader-flex');
+
+    })
+
+    $('a[data-fancybox="gallery"]').fancybox();
+
     function bouquetSize (bouquet) {
         if (!bouquet.id){ 
             return bouquet.text;
@@ -72,7 +176,7 @@ $( function() {
             }            
         });
     }
-    
+
     $('input').focus(function(){
         $(this).removeClass('empty_input');
     });
@@ -135,81 +239,8 @@ $( function() {
         }
     });
 
-    $('input[name=form_button]').click(function(){
-        var type = "order";
-        var order_name = $('.popup_header .order_name').text();
-        var order_size = $('.popup_content select[name=bouquet_size]').select2('data')[0].text;
-        var client_name = $('.popup_content input[name=name]').val();
-        var client_phone = $('.popup_content input[name=phone]').val();
-        var delivery = $('.check_block input').prop("checked");
-        var address = $('.popup_content input[name=address]').val();
-        var send = true;
 
-        if((order_name=="" || order_size == "" || client_name== "" || client_phone== "") || (delivery== true && address== "")){
-            send = false;
-        }
 
-        var data = {'type':type, 'client_name':client_name, 'client_phone':client_phone, 'order_name':order_name, 'order_size':order_size, 'delivery':delivery, 'address':address};
-        if(send == true){
-            sendForm(data);
-            closePopUp();
-            openPopUpOrderNotice();
-            $('.popup_content form select').val('').trigger('change');
-            $('.popup_content form')[0].reset();
-            $('.popup_form_input[name=address]').attr('disabled','disabled');
-        }
-        else{
-            emptyFields($('.popup_content form'));
-        }
-    });
-    $('#order_input_button').click(function(){
-        var type = "fast_order";
-        var bouquet_type = $('.order_form .bouquet_type').select2('data')[0].text;
-        var bouquet_size = $('.order_form .bouquet_size').select2('data')[0].text;
-        var client_name = $('.order_form input[name=name]').val();
-        var client_phone = $('.order_form input[name=phone]').val();
-        var send = true;
-
-        if(bouquet_type=='' || bouquet_size=='' || client_name=='' || client_phone==''){
-            send = false;
-        }
-
-        var data = {'type':type, 'bouquet_type':bouquet_type, 'bouquet_size':bouquet_size, 'client_name':client_name, 'client_phone':client_phone};
-
-        if(send == true){
-            sendForm(data);
-            closePopUp();
-            openPopUpOrderNotice();
-            $('.order_form select').val('').trigger('change');
-            $('.order_form')[0].reset();            
-        }
-        else{
-            emptyFields($('.order_form'));            
-        }
-    });
-    $('.question_box input[name=question_button]').click(function(){
-        var type = "question";
-        var name = $('.question_box input[name=name]').val();
-        var phone = $('.question_box input[name=phone]').val();
-        var question = $('.question_box textarea[name=question_text]').val();
-        var send = true;
-
-        if(name=='' || phone=='' || question==''){
-            send = false
-        }
-
-        var data = {'type':type, 'client_name':name, 'client_phone':phone, 'question':question};
-
-        if(send == true){
-            sendForm(data);
-            closePopUp();
-            openPopUpQuestionNotice();
-            $('.question_box form')[0].reset();
-        }
-        else{
-            emptyFields($('.question_box form'));
-        }
-    });
 
     window.onresize = function(){
         if(window.innerWidth > 579){
@@ -231,7 +262,7 @@ $( function() {
         activeCategory($(this).attr('id'));
         initializeCategory();
     });
-    
+
     function makeSliders(catalog_carousel){
         var elements = catalog_carousel.children('.owl-stage-outer').children('.owl-stage').children('.owl-item ').children('.row').children();
         var count_slides_now = catalog_carousel.children('.owl-stage-outer').children('.owl-stage').children('.owl-item ').length;
@@ -252,7 +283,7 @@ $( function() {
         else if(window.innerWidth > 0){    
             count_elements_need = 4;        
         }
-              
+
         count_slides = calculateSlides(count_elements);        
 
         for(var i = 0; i < count_slides; i++){
@@ -279,7 +310,7 @@ $( function() {
         makeSliders(catalog_carousel);
         addDots('catalog');
     }
-        
+
     $('.catalog_nav_dots').on('click', 'li', function(){
         catalog_carousel.trigger('to.owl.carousel', [$(this).index(), 300]);
     });
@@ -307,7 +338,7 @@ $( function() {
     function calculateSlides(count_elements){
         var count_elements_need = 0;
         var count_slides = 1;
-        
+
         if(window.innerWidth > 1199){    
             count_elements_need = 8;        
         }
@@ -317,12 +348,12 @@ $( function() {
         else if(window.innerWidth > 0){    
             count_elements_need = 4;        
         }
-        
+
         count_slides = parseInt(count_elements/count_elements_need);
         if(count_elements%count_elements_need>0){
             count_slides+=1;
         }
-        
+
         return count_slides;        
     }    
 

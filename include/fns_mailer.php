@@ -16,7 +16,7 @@ function sendmailer($subject,$body,$toemail){
 	$mail->Password = $mpass; // SMTP password
 	
 	$mail->From     = $email; // укажите от кого письмо 
-	$mail->FromName = "Марафет - Профессиональная уборка помещений и территорий"; // имя отправителя
+	$mail->FromName = "Fleur - Доставка цветов в Абазе, бесплатная доставка"; // имя отправителя
 	$mail->AddAddress($toemail); // е-мэил кому отправлять
 	// $mail->AddReplyTo($mfrom,$name); // е-мэил того кому придет ответ на ваше письмо
 	$mail->WordWrap = 50;// set word wrap
